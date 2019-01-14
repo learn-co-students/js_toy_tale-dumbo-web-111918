@@ -3,6 +3,10 @@ body {
   font-family: monospace;
 }
 
+img {
+  max-width: 100%;
+}
+
 #toy-header {
   display: flex;
   justify-content: center;
@@ -22,9 +26,11 @@ body {
 }
 
 .card {
+  position: relative;
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
+  padding-top: 2rem;
   width: 15rem;
   height: 25rem;
   display: inline-grid;
@@ -38,6 +44,9 @@ body {
   width: auto;
 }
 
+button, input[type="submit"] {
+  transition-duration: .2s;
+}
 button {
   position: relative;
   background-color: #e04b52;
@@ -48,30 +57,39 @@ button {
   color: whitesmoke;
   font-size: 18px;
   justify-self: center;
+  border: #e04b52 solid 1px;
 }
 
 button:hover {
   background-color: whitesmoke;
-  border: #e04b52 solid 1px;
   color: #e04b52;
 }
 
 .container {
-  padding: 1rem;
   width: stretch;
-  height: auto;
-  display: none;
-  background: #515DA2;
+  display: block;
+  background: rgba(237, 255, 33, 0.21);
   opacity: .8;
+  padding: 0 1rem;
+  transition-duration: .5s;
+  height: 0;
+  overflow: hidden;
 }
 
 .add-toy-form {
-  width: 80%
+  margin: auto;
+  width: 25%;
 }
+
+.add-toy-form input[type="text"] {
+  width: 100%;
+}
+
 
 .submit {
   position: relative;
   background-color: #e04b52;
+  border: 0;
   border-radius: 5px;
   height: 2rem;
   width: max-content;
@@ -80,11 +98,11 @@ button:hover {
   justify-self: center;
   font-family: monospace;
   margin: 3px;
+  border: #e04b52 solid 1px;
 }
 
 .submit:hover {
   background-color: whitesmoke;
-  border: #e04b52 solid 1px;
   color: #e04b52;
 }
 
@@ -96,4 +114,23 @@ button:hover {
   font-size: 18px;
   font-family: monospace;
   margin: 3px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  height: 1.75rem;
+  width: 1.75rem;
+  color: #e04b52;
+  font-size: 18px;
+  line-height: 1;
+  justify-self: center;
+}
+.delete-btn:hover {
+  background-color: #e04b52;
+  color: whitesmoke;
 }
