@@ -3,6 +3,10 @@ body {
   font-family: monospace;
 }
 
+img{
+  max-width: 100%;
+}
+
 #toy-header {
   display: flex;
   justify-content: center;

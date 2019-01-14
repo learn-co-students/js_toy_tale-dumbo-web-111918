@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 25
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 8
+      "likes": 19
     },
     {
       "id": 3,
@@ -47,6 +47,30 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "buzz lightmothboi",
+      "image": "https://img.ifcdn.com/images/7a8526470ba26bf44770ab7f23419c5bede6e9809f5b64e7a4c3baccc296c56c_1.jpg",
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": "harry bot",
+      "image": "https://i.redd.it/20zactykqas11.jpg",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "name": "Ana ArianaGrande",
+      "image": "https://www.hellomagazine.com/imagenes/travel/2017091442398/ariana-grande-australia-zoo-world-tour-ends/0-218-90/ariana-grande-australia-t.jpg",
+      "likes": 2,
+      "id": 11
+    },
+    {
+      "name": "kokokola",
+      "image": "https://i.pinimg.com/originals/aa/51/cc/aa51ccedaa51bf771fc46e3b02fe0b3b.jpg",
+      "likes": 1,
+      "id": 12
     }
   ]
 }
