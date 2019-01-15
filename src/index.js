@@ -13,35 +13,36 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 })
 
+// check to see if a function is invoked here or not to make an
+// event listener on the inputButton
 
-const newToy = (e) => {
+const addNewToy = (e) => {
   e.preventDefault()
-  const toyName = document.querySelector('#name-value').value
-  const toyImage = document.querySelector('#image-value').value
+  const nameInputValue = document.querySelector('#name-value').value
+  const imageInputValue = document.querySelector('#image-value').value
 
-  const inputValue = {
-    name: toyName,
-    image: toyImage,
+  inputValue = {
+    name: nameInputValue,
+    image: imageInputValue,
     likes: 0
   }
 
-  fetch(`http://localhost:3000/toys`, {
+  fetch('http://localhost:3000/toys', {
     method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify(inputValue)
   })
-  .then(response => response.json())
-  .then(parsedObject => console.log(parsedObject))
-
+  .then(res => res.json())
+  .then(data => console.log(data))
 
 }
 
-inputButton.addEventListener('click', newToy)
+inputButton.addEventListener('click', addNewToy)
 
 
+// ADD MORE CODE
 
 addBtn.addEventListener('click', () => {
   // hide & seek with the form
@@ -59,7 +60,6 @@ addBtn.addEventListener('click', () => {
 const toyCard = (object) => {
   object.forEach(toy => {
     const toyDiv = document.createElement('div')
-    console.log(toyDiv)
     toyDiv.innerHTML = `<div class="card">
       <h2>${toy.name}</h2>
       <img src=${toy.image} class="toy-avatar" />
@@ -69,3 +69,29 @@ const toyCard = (object) => {
     toyCollection.append(toyDiv)
   })
 }
+
+
+// const createNewToy = (e) => {
+//   e.preventDefault();
+//   const nameValueInput = document.querySelector('#name-value').value
+//   const imageValueInput = document.querySelector('#image-value').value
+//
+//   const inputValue = {
+//     name: nameValueInput,
+//     image: imageValueInput,
+//     likes: 0
+//   }
+//
+//   fetch('http://localhost:3000/toys', {
+//     method: 'POST',
+//     body: JSON.stringify(inputValue),
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   })
+//   .then(res => res.json())
+//   .then(data => console.log(data))
+//
+// }
+//
+// inputButton.addEventListener('click', createNewToy)
