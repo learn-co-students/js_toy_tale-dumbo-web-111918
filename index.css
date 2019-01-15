@@ -97,3 +97,7 @@ button:hover {
   font-family: monospace;
   margin: 3px;
 }
+
+.toy-avatar {
+  max-width:100%; height:auto
+}
