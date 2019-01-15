@@ -7,10 +7,12 @@ let addToy = false
 
 function activateLikeButton(btn){
   btn.addEventListener('click', function(e){
-    const id = parseInt(e.target.parentNode.getAttribute("data-id"))
+    const id = e.target.parentNode.dataset.id;
+    // console.log(id);
     const likeCount = parseInt(e.target.previousSibling.innerText)+1
+    e.target.previousSibling.innerText = `${likeCount} Likes`
 
-    fetch("http://localhost:3000/toys/"+id, {
+    fetch(`http://localhost:3000/toys/${id}`, {
 
       "method": "PATCH",
       "headers": {
@@ -18,10 +20,10 @@ function activateLikeButton(btn){
         "Accept": "application/json"
       },
       "body": JSON.stringify({
-        "likes": likeCount
-      })
+        likes: likeCount
     })
-    e.target.previousSibling.innerText = `${likeCount} Likes`
+  })
+    // e.target.previousSibling.innerText = `${likeCount} Likes`
 
   })
 }
@@ -102,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function(){
       toyDiv.classList.add("card");
       toyCollectionDiv.appendChild(toyDiv)
 
-      toyDiv.setAttribute("data-id", toy.id);
+      toyDiv.setAttribute("data-id", `${toy.id}`);
 
 
       const h2 = document.createElement('h2')
