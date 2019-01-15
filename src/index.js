@@ -1,9 +1,33 @@
 const addBtn = document.querySelector('#new-toy-btn')
 const toyForm = document.querySelector('.container')
 const toyList = document.querySelector('#toy-collection');
-
+const likeButton = document.getElementsByClassName('like-btn')
 
 let addToy = false
+
+function activateLikeButton(btn){
+  btn.addEventListener('click', function(e){
+    const id = parseInt(e.target.parentNode.getAttribute("data-id"))
+    const likeCount = parseInt(e.target.previousSibling.innerText)+1
+
+    fetch("http://localhost:3000/toys/"+id, {
+
+      "method": "PATCH",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      "body": JSON.stringify({
+        "likes": likeCount
+      })
+    })
+    e.target.previousSibling.innerText = `${likeCount} Likes`
+
+  })
+}
+
+
+
 toyForm.addEventListener('submit', function(e){
   e.preventDefault()
 
@@ -78,6 +102,9 @@ document.addEventListener("DOMContentLoaded", function(){
       toyDiv.classList.add("card");
       toyCollectionDiv.appendChild(toyDiv)
 
+      toyDiv.setAttribute("data-id", toy.id);
+
+
       const h2 = document.createElement('h2')
       h2.innerText = toy.name
       toyDiv.appendChild(h2)
@@ -94,8 +121,8 @@ document.addEventListener("DOMContentLoaded", function(){
       const button = document.createElement("button")
       button.classList.add("like-btn")
       button.innerText = "Like <3"
-      toyDiv.appendChild(button)
-
+      toyDiv.appendChild(button);
+      activateLikeButton(button);
     })
 
 
