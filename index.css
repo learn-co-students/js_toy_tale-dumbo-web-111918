@@ -21,11 +21,15 @@ body {
   margin: 2rem;
 }
 
+#toy-collection div {
+  display: inline-block;
+}
+
 .card {
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
-  width: 15rem;
+  width: 20rem;
   height: 25rem;
   display: inline-grid;
   margin: 1rem 2rem;
