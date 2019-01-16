@@ -63,16 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
     return toysSlapOnDom(data)
   })
 
-
   addToyForm.addEventListener('submit', createNewToy);
   toyArea.addEventListener('click', editLikesOrToy);
 
   //put the event listent on the form 
   editToyForm.addEventListener('submit', handleEditSubmitButton)
 
-})
+}) //end of DOM Content Loaded
 
-// OR HERE! OUTSIDE DOM
+//OUTSIDE DOM
 function createNewToy(event) {
   console.log(event.target)
   event.target[0].value
@@ -102,9 +101,6 @@ function createNewToy(event) {
       })
     })
 }
-
-
-
 function editLikesOrToy(event) {
   // console.log(event.target)
   if (event.target.className === 'like-btn') {
@@ -148,6 +144,7 @@ function editLikesOrToy(event) {
 
   }
 }
+
 function handleEditSubmitButton(event) {
   
   event.preventDefault();
@@ -179,7 +176,9 @@ function handleEditSubmitButton(event) {
 
     header.innerText = data.name
     img.src = data.image
- 
+
+    event.target.reset()
   })
 }
 
+//TODO: Delete Toys 
