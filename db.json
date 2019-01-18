@@ -4,25 +4,25 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 79
+      "likes": 18
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 100
+      "likes": 23
     },
     {
       "id": 3,
       "name": "Mr. Potato Head",
       "image": "https://vignette.wikia.nocookie.net/universe-of-smash-bros-lawl/images/d/d8/Mr-potato-head-toy-story.gif/revision/latest?cb=20151129131217",
-      "likes": 24
+      "likes": 10
     },
     {
       "id": 4,
       "name": "Slinky Dog",
       "image": "https://www.freeiconspng.com/uploads/slinky-png-transparent-1.png",
-      "likes": "7"
+      "likes": 43
     },
     {
       "id": 5,
@@ -49,10 +49,16 @@
       "likes": -2
     },
     {
-      "name": "",
-      "image": "",
+      "name": "Lapras",
+      "image": "https://cdn11.bigcommerce.com/s-89ffd/images/stencil/1024x1024/products/50415/167554/4521329245850_04275f0e80d35f0591010c69e4471bb6__84460.1542262250.jpg?c=2",
       "likes": 0,
       "id": 9
+    },
+    {
+      "name": "Lapras1",
+      "image": "https://cdn11.bigcommerce.com/s-89ffd/images/stencil/1024x1024/products/50415/167554/4521329245850_04275f0e80d35f0591010c69e4471bb6__84460.1542262250.jpg?c=2",
+      "likes": 0,
+      "id": 10
     }
   ]
 }
