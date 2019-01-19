@@ -56,7 +56,6 @@ fetch(toyFetchURL)
        	  return response.json();
        }).then(function(data){
        	  //console.log(data);
-          toyCollection.innerHTML = ""
        	  toyCollection.append(toyCardMaker(data)); //because I already appended
        	  //but I appended inside array so I have to re-append the individual card
        })
@@ -153,7 +152,7 @@ fetch(toyFetchURL)
       toyImage.style.height = "100 px";
      newToyCard.append(toyName);
      toyImage.setAttribute("class", "toy-avatar")
-     //newToyCard.append(toyIamge);
+     //newToyCard.append(toyImage);
 
       const toyLikes = document.createElement("p")
       toyLikes.innerText = `${toy.likes} likes`;
